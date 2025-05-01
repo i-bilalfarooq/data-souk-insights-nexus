@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,7 +32,9 @@ const Navbar = () => {
     <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'py-2 glass-effect shadow-md' : 'py-4 bg-transparent'}`}>
       <div className="container flex items-center justify-between">
         <div className="flex items-center">
-          <span className="text-2xl font-bold gradient-text">DataSouk</span>
+          <Link to="/">
+            <span className="text-2xl font-bold gradient-text">DataSouk</span>
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
@@ -45,8 +48,10 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <Button className="ml-4 bg-datasouk-teal hover:bg-datasouk-blue text-white">
-            Get Started
+          <Button asChild className="ml-4 bg-datasouk-teal hover:bg-datasouk-blue text-white hover:scale-105 transition-transform active:scale-95">
+            <Link to="/dashboard">
+              Get Started
+            </Link>
           </Button>
         </div>
 
@@ -69,8 +74,10 @@ const Navbar = () => {
                     {link.name}
                   </a>
                 ))}
-                <Button className="mt-4 bg-datasouk-teal hover:bg-datasouk-blue text-white w-full">
-                  Get Started
+                <Button asChild className="mt-4 bg-datasouk-teal hover:bg-datasouk-blue text-white w-full hover:scale-105 transition-transform active:scale-95">
+                  <Link to="/dashboard">
+                    Get Started
+                  </Link>
                 </Button>
               </nav>
             </SheetContent>

@@ -24,7 +24,7 @@ const Index = () => {
           <p className="text-lg mb-8 max-w-2xl mx-auto">
             Select your role to access end-to-end encrypted market data protected by Kyber quantum-resistant cryptography on Diamante blockchain.
           </p>
-          <Button asChild size="lg" className="bg-datasouk-accent hover:bg-datasouk-accent/80 text-datasouk-navy">
+          <Button asChild size="lg" className="bg-datasouk-accent hover:bg-datasouk-accent/80 text-datasouk-navy hover:scale-105 transition-transform active:scale-95">
             <Link to="/dashboard" className="flex items-center">
               <Shield className="mr-2 h-5 w-5" />
               Select Your Role & Access Data

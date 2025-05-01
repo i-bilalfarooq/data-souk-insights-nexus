@@ -2,6 +2,7 @@
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -40,12 +41,16 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <Button className="bg-datasouk-teal hover:bg-datasouk-blue text-white px-8 py-6 text-lg">
-              Get Started
-              <ArrowRight className="ml-2 h-5 w-5" />
+            <Button asChild className="bg-datasouk-teal hover:bg-datasouk-blue text-white px-8 py-6 text-lg hover:scale-105 transition-transform active:scale-95">
+              <Link to="/dashboard">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
-            <Button variant="outline" className="border-datasouk-blue text-datasouk-blue hover:bg-datasouk-blue/10 px-8 py-6 text-lg">
-              Learn More
+            <Button asChild variant="outline" className="border-datasouk-blue text-datasouk-blue hover:bg-datasouk-blue/10 px-8 py-6 text-lg">
+              <a href="#about">
+                Learn More
+              </a>
             </Button>
           </motion.div>
           
