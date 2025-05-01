@@ -106,3 +106,9 @@
 .glass-effect {
   @apply bg-white/80 backdrop-blur-md dark:bg-black/60;
 }
+
+@keyframes slide {
+  0% { transform: translateX(-30%); }
+  100% { transform: translateX(100%); }
+}
+
